@@ -1,5 +1,7 @@
 package cn.lzm.prac.learn.model;
 
+import androidx.databinding.BaseObservable;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -2,7 +2,6 @@ package cn.lzm.prac.learn.viewmodel;
 
 import java.util.List;
 
-import cn.lzm.prac.learn.MainActivity;
 import cn.lzm.prac.learn.listener.LoadListener;
 import cn.lzm.prac.learn.model.News;
 import cn.lzm.prac.learn.model.NewsItem;

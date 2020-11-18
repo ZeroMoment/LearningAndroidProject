@@ -1,5 +1,7 @@
 package cn.lzm.prac.learn.model;
 
+import androidx.databinding.BaseObservable;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,9 +31,13 @@ public class ActionItem {
 
         List<ActionItem> actionItems = new ArrayList<>();
         ActionItem actionItem1 = new ActionItem();
-        actionItem1.actionType = "news";
-        actionItem1.actionValue = "news item";
+        actionItem1.actionType = "news_top";
+        actionItem1.actionValue = "news top item";
         actionItems.add(actionItem1);
+        ActionItem actionItem2 = new ActionItem();
+        actionItem2.actionType = "news_junshi";
+        actionItem2.actionValue = "news junshi item";
+        actionItems.add(actionItem2);
 
         loadListener.loadSuccess(actionItems);
     }

@@ -48,9 +48,11 @@ public class MainActionAdapter extends RecyclerView.Adapter {
             public void onClick(View v) {
                 String actionType = actionItem.getActionType();
                 Log.e("lzm", "aciton:"+actionType);
-                if("news".equals(actionType)) {
+                if("news_top".equals(actionType)) {
                     Intent intent = new Intent(mContext, NewsActivity.class);
                     mContext.startActivity(intent);
+                } else if("news_junshi".equals(actionType)) {
+
                 }
             }
         });

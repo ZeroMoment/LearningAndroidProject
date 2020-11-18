@@ -20,6 +20,7 @@
         </activity>
 
         <activity android:name=".view.NewsActivity" />
+        <activity android:name=".view.WebviewActivity" />
     </application>
 
 </manifest>
