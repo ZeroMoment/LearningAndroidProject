@@ -18,6 +18,7 @@ import cn.lzm.prac.learn.R;
 import cn.lzm.prac.learn.databinding.ItemActionsBinding;
 import cn.lzm.prac.learn.model.ActionItem;
 import cn.lzm.prac.learn.view.NewsActivity;
+import cn.lzm.prac.learn.view.NewsJunshiAcitivty;
 
 public class MainActionAdapter extends RecyclerView.Adapter {
     private Context mContext;
@@ -52,7 +53,8 @@ public class MainActionAdapter extends RecyclerView.Adapter {
                     Intent intent = new Intent(mContext, NewsActivity.class);
                     mContext.startActivity(intent);
                 } else if("news_junshi".equals(actionType)) {
-
+                    Intent junshiIntent = new Intent(mContext, NewsJunshiAcitivty.class);
+                    mContext.startActivity(junshiIntent);
                 }
             }
         });

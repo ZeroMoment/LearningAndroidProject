@@ -15,7 +15,7 @@ public class ImageHelper {
      *
      */
 
-    @BindingAdapter(value = {"imageUrl", "placeHolder", "bind:error"}, requireAll = false)
+    @BindingAdapter(value = {"imageUrl", "placeHolder", "error"}, requireAll = false)
     public static void loadImage(ImageView imageView, String url, Drawable holderDrawable, Drawable errorDrawable) {
         Glide.with(imageView.getContext())
                 .load(url)
