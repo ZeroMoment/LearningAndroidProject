@@ -2,6 +2,7 @@
 buildscript {
     ext {
         kotlin_version = '1.4.10'
+        archLifecycleVersion = '2.1.0-alpha03'
     }
     repositories {
         mavenCentral()

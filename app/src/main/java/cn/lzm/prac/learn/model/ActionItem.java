@@ -38,6 +38,10 @@ public class ActionItem {
         actionItem2.actionType = "news_junshi";
         actionItem2.actionValue = "news junshi item";
         actionItems.add(actionItem2);
+        ActionItem actionItem3 = new ActionItem();
+        actionItem3.actionType = "livedate_test";
+        actionItem3.actionValue = "livedate test item";
+        actionItems.add(actionItem3);
 
         loadListener.loadSuccess(actionItems);
     }

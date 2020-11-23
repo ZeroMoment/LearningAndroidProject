@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.lzm.prac.learn">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -25,6 +26,8 @@
         <activity
             android:name=".view.NewsJunshiAcitivty"
             android:label="@string/title_activity_news_junshi_acitivty"></activity>
+
+        <activity android:name=".view.TestViewModelActivity" />
     </application>
 
 </manifest>
