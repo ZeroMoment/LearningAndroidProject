@@ -42,6 +42,10 @@ public class ActionItem {
         actionItem3.actionType = "livedate_test";
         actionItem3.actionValue = "livedate test item";
         actionItems.add(actionItem3);
+        ActionItem actionItem4 = new ActionItem();
+        actionItem4.actionType = "service_test";
+        actionItem4.actionValue = "service test item";
+        actionItems.add(actionItem4);
 
         loadListener.loadSuccess(actionItems);
     }

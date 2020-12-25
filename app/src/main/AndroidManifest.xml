@@ -28,6 +28,11 @@
             android:label="@string/title_activity_news_junshi_acitivty"></activity>
 
         <activity android:name=".view.TestViewModelActivity" />
+        <activity android:name=".view.TestServiceActivity" />
+
+        <service android:name=".service.TestService" />
+        <!--android:process=":otherRemote" android:enabled="true" 独立进程：aidl
+            android:exported="true"-->
     </application>
 
 </manifest>

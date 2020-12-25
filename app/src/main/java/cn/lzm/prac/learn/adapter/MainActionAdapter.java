@@ -19,6 +19,7 @@ import cn.lzm.prac.learn.databinding.ItemActionsBinding;
 import cn.lzm.prac.learn.model.ActionItem;
 import cn.lzm.prac.learn.view.NewsActivity;
 import cn.lzm.prac.learn.view.NewsJunshiAcitivty;
+import cn.lzm.prac.learn.view.TestServiceActivity;
 import cn.lzm.prac.learn.view.TestViewModelActivity;
 
 public class MainActionAdapter extends RecyclerView.Adapter {
@@ -59,6 +60,9 @@ public class MainActionAdapter extends RecyclerView.Adapter {
                 } else if("livedate_test".equals(actionType)) {
                     Intent livedataIntent = new Intent(mContext, TestViewModelActivity.class);
                     mContext.startActivity(livedataIntent);
+                } else if("service_test".equals(actionType)) {
+                    Intent serviceTestIntent = new Intent(mContext, TestServiceActivity.class);
+                    mContext.startActivity(serviceTestIntent);
                 }
             }
         });
