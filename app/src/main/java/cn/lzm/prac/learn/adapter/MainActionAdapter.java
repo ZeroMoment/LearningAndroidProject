@@ -17,6 +17,7 @@ import java.util.List;
 import cn.lzm.prac.learn.R;
 import cn.lzm.prac.learn.databinding.ItemActionsBinding;
 import cn.lzm.prac.learn.model.ActionItem;
+import cn.lzm.prac.learn.view.FragmentTestActivity;
 import cn.lzm.prac.learn.view.NewsActivity;
 import cn.lzm.prac.learn.view.NewsJunshiAcitivty;
 import cn.lzm.prac.learn.view.TestServiceActivity;
@@ -63,6 +64,9 @@ public class MainActionAdapter extends RecyclerView.Adapter {
                 } else if("service_test".equals(actionType)) {
                     Intent serviceTestIntent = new Intent(mContext, TestServiceActivity.class);
                     mContext.startActivity(serviceTestIntent);
+                } else if("fragment_test".equals(actionType)) {
+                    Intent fragmentIntent = new Intent(mContext, FragmentTestActivity.class);
+                    mContext.startActivity(fragmentIntent);
                 }
             }
         });

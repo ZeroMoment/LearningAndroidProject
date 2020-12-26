@@ -25,10 +25,12 @@
 
         <activity
             android:name=".view.NewsJunshiAcitivty"
-            android:label="@string/title_activity_news_junshi_acitivty"></activity>
+            android:label="@string/title_activity_news_junshi_acitivty" />
 
         <activity android:name=".view.TestViewModelActivity" />
         <activity android:name=".view.TestServiceActivity" />
+
+        <activity android:name=".view.FragmentTestActivity" />
 
         <service android:name=".service.TestService" />
         <!--android:process=":otherRemote" android:enabled="true" 独立进程：aidl

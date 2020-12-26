@@ -46,6 +46,10 @@ public class ActionItem {
         actionItem4.actionType = "service_test";
         actionItem4.actionValue = "service test item";
         actionItems.add(actionItem4);
+        ActionItem actionItem5 = new ActionItem();
+        actionItem5.actionType = "fragment_test";
+        actionItem5.actionValue = "fragment test item";
+        actionItems.add(actionItem5);
 
         loadListener.loadSuccess(actionItems);
     }
