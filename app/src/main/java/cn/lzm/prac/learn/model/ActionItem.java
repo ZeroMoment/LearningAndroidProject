@@ -50,6 +50,10 @@ public class ActionItem {
         actionItem5.actionType = "fragment_test";
         actionItem5.actionValue = "fragment test item";
         actionItems.add(actionItem5);
+        ActionItem actionItem6 = new ActionItem();
+        actionItem6.actionType = "components_test";
+        actionItem6.actionValue = "components test item";
+        actionItems.add(actionItem6);
 
         loadListener.loadSuccess(actionItems);
     }

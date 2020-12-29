@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import cn.lzm.prac.learn.R;
+import cn.lzm.prac.learn.components.LiveDataActivity;
 import cn.lzm.prac.learn.databinding.ItemActionsBinding;
 import cn.lzm.prac.learn.model.ActionItem;
 import cn.lzm.prac.learn.view.FragmentTestActivity;
@@ -67,6 +68,9 @@ public class MainActionAdapter extends RecyclerView.Adapter {
                 } else if("fragment_test".equals(actionType)) {
                     Intent fragmentIntent = new Intent(mContext, FragmentTestActivity.class);
                     mContext.startActivity(fragmentIntent);
+                } else if("components_test".equals(actionType)) {
+                    Intent componetsIntent = new Intent(mContext, LiveDataActivity.class);
+                    mContext.startActivity(componetsIntent);
                 }
             }
         });

@@ -28,6 +28,8 @@
             android:label="@string/title_activity_news_junshi_acitivty" />
 
         <activity android:name=".view.TestViewModelActivity" />
+        <activity android:name=".components.LiveDataActivity" />
+
         <activity android:name=".view.TestServiceActivity" />
 
         <activity android:name=".view.FragmentTestActivity" />
