@@ -54,6 +54,10 @@ public class ActionItem {
         actionItem6.actionType = "components_test";
         actionItem6.actionValue = "components test item";
         actionItems.add(actionItem6);
+        ActionItem actionItem7 = new ActionItem();
+        actionItem7.actionType = "tab_fragment";
+        actionItem7.actionValue = "tab fragment item";
+        actionItems.add(actionItem7);
 
         loadListener.loadSuccess(actionItems);
     }

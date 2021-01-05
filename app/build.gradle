@@ -49,4 +49,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 
     implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
+
+    implementation "androidx.fragment:fragment:1.2.1"
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.2.0'
 }

@@ -21,6 +21,7 @@ import cn.lzm.prac.learn.model.ActionItem;
 import cn.lzm.prac.learn.view.FragmentTestActivity;
 import cn.lzm.prac.learn.view.NewsActivity;
 import cn.lzm.prac.learn.view.NewsJunshiAcitivty;
+import cn.lzm.prac.learn.view.TabFragmentActivity;
 import cn.lzm.prac.learn.view.TestServiceActivity;
 import cn.lzm.prac.learn.view.TestViewModelActivity;
 
@@ -71,6 +72,9 @@ public class MainActionAdapter extends RecyclerView.Adapter {
                 } else if("components_test".equals(actionType)) {
                     Intent componetsIntent = new Intent(mContext, LiveDataActivity.class);
                     mContext.startActivity(componetsIntent);
+                } else if("tab_fragment".equals(actionType)) {
+                    Intent tabIntent = new Intent(mContext, TabFragmentActivity.class);
+                    mContext.startActivity(tabIntent);
                 }
             }
         });
