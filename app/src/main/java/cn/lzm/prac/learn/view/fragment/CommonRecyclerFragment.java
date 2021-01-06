@@ -17,6 +17,17 @@ public class CommonRecyclerFragment extends Fragment {
 
     String mTitle;
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.e("lzm", "CommonRecyclerFragment--onCreate");
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Log.e("lzm", "CommonRecyclerFragment-onActivityCreated=");
+    }
 
     @Nullable
     @Override
@@ -32,8 +43,33 @@ public class CommonRecyclerFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Log.e("lzm", "CommonRecyclerFragment-onViewCreated=");
         TextView testTv = view.findViewById(R.id.test_common_tv);
         testTv.setText(mTitle);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.e("lzm", "CommonRecyclerFragment-onStop=");
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.e("lzm", "CommonRecyclerFragment-onDestroyView=");
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.e("lzm", "CommonRecyclerFragment-onDestroy=");
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        Log.e("lzm", "CommonRecyclerFragment-onDetach=");
     }
 
     public static CommonRecyclerFragment newInstance(String title) {

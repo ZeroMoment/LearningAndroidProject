@@ -67,9 +67,16 @@ public class HomeFragment extends Fragment {
             mFragmentList.add(CommonRecyclerFragment.newInstance(titles[i]));
         }
 
-        mFragmentAdapter = new FragmentAdapter(getActivity().getSupportFragmentManager(), mFragmentList, mTitles);
+        mFragmentAdapter = new FragmentAdapter(getChildFragmentManager(), mFragmentList, mTitles);
         mPager.setAdapter(mFragmentAdapter);
+        mPager.setOffscreenPageLimit(2);
         mTabLayout.setupWithViewPager(mPager);
+    }
+
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        Log.e("lzm","home--isHidden="+hidden);
     }
 
     @Override
@@ -87,6 +94,11 @@ public class HomeFragment extends Fragment {
     @Override
     public void onDestroy() {
         Log.e("lzm","home--onDestroy");
+        mFragmentList.clear();
+        mTitles.clear();
+        mFragmentList = null;
+        mTitles = null;
+        mFragmentAdapter.clear();
         super.onDestroy();
     }
 

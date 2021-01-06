@@ -36,4 +36,11 @@ public class FragmentAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         return mTitles.get(position);
     }
+
+    public void clear() {
+        mFragmentList.clear();
+        mFragmentList=null;
+        mTitles.clear();
+        mTitles =null;
+    }
 }

@@ -69,26 +69,41 @@ public class TabFragmentActivity extends AppCompatActivity {
                     case 0:
                         if(mHomeFragment == null) {
                             mHomeFragment = HomeFragment.newInstance();
+                        } else {
+                            mHomeFragment = (HomeFragment) mFragmentManager.findFragmentByTag("home_tab");
                         }
-                        mFragmentTransaction.replace(R.id.tab_fragment_container, mHomeFragment);
+                        mFragmentTransaction.show(mHomeFragment).hide(getHideFragment());
+
                         break;
                     case 1:
                         if(mFollowFragment == null) {
                             mFollowFragment = FollowFragment.newInstance();
+                            mFragmentTransaction.add(R.id.tab_fragment_container, mFollowFragment, "follow_tab").hide(getHideFragment());
+                        } else {
+                            mFollowFragment = (FollowFragment) mFragmentManager.findFragmentByTag("follow_tab");
+                            mFragmentTransaction.show(mFollowFragment).hide(getHideFragment());
                         }
-                        mFragmentTransaction.replace(R.id.tab_fragment_container, mFollowFragment);
+
                         break;
                     case 2:
                         if(mExchangeFragment == null) {
                             mExchangeFragment = ExchangeFragment.newInstance();
+                            mFragmentTransaction.add(R.id.tab_fragment_container, mExchangeFragment, "exchange_tab").hide(getHideFragment());
+                        } else {
+                            mExchangeFragment = (ExchangeFragment) mFragmentManager.findFragmentByTag("exchange_tab");
+                            mFragmentTransaction.show(mExchangeFragment).hide(getHideFragment());
                         }
-                        mFragmentTransaction.replace(R.id.tab_fragment_container, mExchangeFragment);
+
                         break;
                     case 3:
                         if(mMeFragment == null) {
                             mMeFragment = MeFragment.newInstance();
+                            mFragmentTransaction.add(R.id.tab_fragment_container, mMeFragment, "me_tab").hide(getHideFragment());
+                        } else {
+                            mMeFragment = (MeFragment) mFragmentManager.findFragmentByTag("me_tab");
+                            mFragmentTransaction.show(mMeFragment).hide(getHideFragment());
                         }
-                        mFragmentTransaction.replace(R.id.tab_fragment_container, mMeFragment);
+
                         break;
                     default:
                         break;
@@ -114,7 +129,22 @@ public class TabFragmentActivity extends AppCompatActivity {
     private void setDefaultFragment() {
         mFragmentManager = getSupportFragmentManager();
         mFragmentTransaction = mFragmentManager.beginTransaction();
-        mFragmentTransaction.replace(R.id.tab_fragment_container, HomeFragment.newInstance());
+        mHomeFragment = HomeFragment.newInstance();
+        mFragmentTransaction.add(R.id.tab_fragment_container, mHomeFragment, "home_tab");
         mFragmentTransaction.commit();
+    }
+
+    private Fragment getHideFragment() {
+        Log.e("lzm", "gethideffff="+lastSelectedPosition);
+        switch (lastSelectedPosition) {
+            case 0:
+                return mHomeFragment;
+            case 1:
+                return mFollowFragment;
+            case 2:
+                return mExchangeFragment;
+            default:
+                return mMeFragment;
+        }
     }
 }
