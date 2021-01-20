@@ -41,6 +41,8 @@
         <service android:name=".service.TestService" />
         <!--android:process=":otherRemote" android:enabled="true" 独立进程：aidl
             android:exported="true"-->
+
+        <activity android:name=".view.AloneWebviewActivity" android:process=":remoteWeb" />
     </application>
 
 </manifest>

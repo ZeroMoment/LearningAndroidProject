@@ -58,6 +58,10 @@ public class ActionItem {
         actionItem7.actionType = "tab_fragment";
         actionItem7.actionValue = "tab fragment item";
         actionItems.add(actionItem7);
+        ActionItem actionItem8 = new ActionItem();
+        actionItem8.actionType = "web_process";
+        actionItem8.actionValue = "web process item";
+        actionItems.add(actionItem8);
 
         loadListener.loadSuccess(actionItems);
     }

@@ -13,11 +13,13 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 import cn.lzm.prac.learn.R;
 import cn.lzm.prac.learn.components.LiveDataActivity;
 import cn.lzm.prac.learn.databinding.ItemActionsBinding;
 import cn.lzm.prac.learn.model.ActionItem;
+import cn.lzm.prac.learn.view.AloneWebviewActivity;
 import cn.lzm.prac.learn.view.FragmentTestActivity;
 import cn.lzm.prac.learn.view.NewsActivity;
 import cn.lzm.prac.learn.view.NewsJunshiAcitivty;
@@ -75,7 +77,12 @@ public class MainActionAdapter extends RecyclerView.Adapter {
                 } else if("tab_fragment".equals(actionType)) {
                     Intent tabIntent = new Intent(mContext, TabFragmentActivity.class);
                     mContext.startActivity(tabIntent);
+                } else if("web_process".equals(actionType)) {
+                    Intent webIntent = new Intent(mContext, AloneWebviewActivity.class);
+                    webIntent.putExtra("alone_weburl", "https://www.baidu.com");
+                    mContext.startActivity(webIntent);
                 }
+
             }
         });
     }
