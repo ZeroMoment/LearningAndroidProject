@@ -13,7 +13,6 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
-import java.util.concurrent.CountDownLatch;
 
 import cn.lzm.prac.learn.R;
 import cn.lzm.prac.learn.components.LiveDataActivity;
@@ -35,7 +34,6 @@ public class MainActionAdapter extends RecyclerView.Adapter {
         this.mContext = context;
         this.mActionItemList = actionItems;
     }
-
 
     @NonNull
     @Override
