@@ -8,6 +8,7 @@ import android.view.ViewTreeObserver
 import androidx.appcompat.app.AppCompatActivity
 import cn.lzm.prac.learn.MainActivity
 import cn.lzm.prac.learn.R
+import cn.lzm.prac.learn.utils.ShareCommon
 import dalvik.system.PathClassLoader
 import kotlinx.coroutines.*
 
@@ -43,6 +44,11 @@ class SplashActivity : AppCompatActivity() {
         }
 
         Log.e("lzm","协程后---")
+
+        var shareBuilder:ShareCommon = ShareCommon.Builder("title")
+                .setLink("http://www.baidu.com")
+                .build()
+        shareBuilder.share()
 
     }
 
