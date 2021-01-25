@@ -3,6 +3,8 @@ package cn.lzm.prac.learn.utils;
 import android.text.TextUtils;
 import android.util.Log;
 
+import java.util.LinkedHashMap;
+
 public class ShareCommon {
 
     private String title; //必填
