@@ -19,6 +19,7 @@ import cn.lzm.prac.learn.components.LiveDataActivity;
 import cn.lzm.prac.learn.databinding.ItemActionsBinding;
 import cn.lzm.prac.learn.model.ActionItem;
 import cn.lzm.prac.learn.view.AloneWebviewActivity;
+import cn.lzm.prac.learn.view.FlutterEntranceActivity;
 import cn.lzm.prac.learn.view.FragmentTestActivity;
 import cn.lzm.prac.learn.view.NewsActivity;
 import cn.lzm.prac.learn.view.NewsJunshiAcitivty;
@@ -79,6 +80,9 @@ public class MainActionAdapter extends RecyclerView.Adapter {
                     Intent webIntent = new Intent(mContext, AloneWebviewActivity.class);
                     webIntent.putExtra("alone_weburl", "https://www.baidu.com");
                     mContext.startActivity(webIntent);
+                } else if("flutter_mix".equals(actionType)) {
+                    Intent flutterIntent = new Intent(mContext, FlutterEntranceActivity.class);
+                    mContext.startActivity(flutterIntent);
                 }
 
             }

@@ -1,7 +1,5 @@
 package cn.lzm.prac.learn.model;
 
-import androidx.databinding.BaseObservable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,6 +60,10 @@ public class ActionItem {
         actionItem8.actionType = "web_process";
         actionItem8.actionValue = "web process item";
         actionItems.add(actionItem8);
+        ActionItem actionItem9 = new ActionItem();
+        actionItem9.actionType = "flutter_mix";
+        actionItem9.actionValue = "flutter mix item";
+        actionItems.add(actionItem9);
 
         loadListener.loadSuccess(actionItems);
     }
