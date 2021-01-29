@@ -5,9 +5,10 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import cn.lzm.prac.learn.R
 import io.flutter.embedding.android.FlutterActivity
-import io.flutter.embedding.android.FlutterFragment
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugins.GeneratedPluginRegistrant
 
-class FlutterEntranceActivity : AppCompatActivity() {
+class FlutterEntranceActivity : FlutterActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,11 @@ class FlutterEntranceActivity : AppCompatActivity() {
 //            gotoFlutter("two_page")
             gotoFlutterWithCache("two_engiend_id")
         }
+    }
+
+    override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+        super.configureFlutterEngine(flutterEngine)
+        GeneratedPluginRegistrant.registerWith(flutterEngine)
     }
 
     fun gotoFlutter(pageRoute: String) {

@@ -51,6 +51,7 @@
 
         <activity android:name=".view.FlutterEntranceActivity" />
         <activity android:name="io.flutter.embedding.android.FlutterActivity" />
+
     </application>
 
 </manifest>
