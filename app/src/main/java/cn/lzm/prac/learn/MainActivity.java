@@ -1,5 +1,6 @@
 package cn.lzm.prac.learn;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -39,5 +40,34 @@ public class MainActivity extends AppCompatActivity {
 
         //加载数据
         mViewModel.loadActions();
+
+//        TestTask testTask = new TestTask();
+//        testTask.execute(10, 20);
+    }
+
+    class TestTask extends AsyncTask<Integer, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            Log.e("lzm", "mytask---showDialog");
+        }
+
+        @Override
+        protected String doInBackground(Integer... integers) {
+            int firtv = integers[0];
+            int sendv = integers[1];
+
+            Log.e("lzm", "mytask---doInBackground-fv:"+firtv+"--dnv:"+sendv);
+
+            return ""+(firtv+sendv);
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Log.e("lzm", "mytask---onPostExecute-result:"+s);
+
+        }
     }
 }
